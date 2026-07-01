@@ -1,0 +1,114 @@
+Last login: Wed Apr 22 22:49:32 on console
+shuku@shukunoMacBook-Air ~ % ls
+24sb1007@student.gs.chiba-u.jp - Google Drive	Downloads					Pictures
+2685242410gh@gmail.com - Google Drive		Library						Public
+Desktop						Movies
+Documents					Music
+shuku@shukunoMacBook-Air ~ % ls-l
+zsh: command not found: ls-l
+shuku@shukunoMacBook-Air ~ % pwd
+/Users/shuku
+shuku@shukunoMacBook-Air ~ % ls -l
+total 0
+lrwx------    1 shuku  staff    76  4 22 22:49 24sb1007@student.gs.chiba-u.jp - Google Drive -> /Users/shuku/Library/CloudStorage/GoogleDrive-24sb1007@student.gs.chiba-u.jp
+lrwx------    1 shuku  staff    68  4 22 22:49 2685242410gh@gmail.com - Google Drive -> /Users/shuku/Library/CloudStorage/GoogleDrive-2685242410gh@gmail.com
+drwx------+   4 shuku  staff   128  4 10 14:20 Desktop
+drwx------@  10 shuku  staff   320  2 11 11:27 Documents
+drwx------+  69 shuku  staff  2208  4 23 17:13 Downloads
+drwx------@ 101 shuku  staff  3232  1 30 02:02 Library
+drwx------    6 shuku  staff   192 10  3  2025 Movies
+drwx------+   5 shuku  staff   160  4 10 14:19 Music
+drwx------+   6 shuku  staff   192  4 10 14:18 Pictures
+drwxr-xr-x+   5 shuku  staff   160 10  3  2025 Public
+shuku@shukunoMacBook-Air ~ % cat fib.py
+cat: fib.py: No such file or directory
+shuku@shukunoMacBook-Air ~ % cat Pictures.py
+cat: Pictures.py: No such file or directory
+shuku@shukunoMacBook-Air ~ % pwd
+/Users/shuku
+shuku@shukunoMacBook-Air ~ % ls
+24sb1007@student.gs.chiba-u.jp - Google Drive	Downloads					Pictures
+2685242410gh@gmail.com - Google Drive		Library						Public
+Desktop						Movies
+Documents					Music
+shuku@shukunoMacBook-Air ~ % cat fib.py
+cat: fib.py: No such file or directory
+shuku@shukunoMacBook-Air ~ % ls Pictures
+iPod Photo Cache		Photos Library.photoslibrary
+shuku@shukunoMacBook-Air ~ % cat Pictures/Photos Library.photoslibrary/
+cat: Pictures/Photos: No such file or directory
+cat: Library.photoslibrary/: No such file or directory
+shuku@shukunoMacBook-Air ~ % cat "Pictures/Photos Library.photoslibrary/"
+cat: Pictures/Photos Library.photoslibrary/: Is a directory
+shuku@shukunoMacBook-Air ~ % ls Documents
+000important					200university					Zoom
+100learning					300job						良問の風ー物理ー入試問題集.pdf
+shuku@shukunoMacBook-Air ~ % cat Documents/1.py
+cat: Documents/1.py: No such file or directory
+shuku@shukunoMacBook-Air ~ % mkdir ex
+shuku@shukunoMacBook-Air ~ % cd ex
+shuku@shukunoMacBook-Air ex % cd
+shuku@shukunoMacBook-Air ~ % cd ex
+shuku@shukunoMacBook-Air ex % touch file1
+shuku@shukunoMacBook-Air ex % mkdir dir2
+shuku@shukunoMacBook-Air ex % cd dir2
+shuku@shukunoMacBook-Air dir2 % ls
+shuku@shukunoMacBook-Air dir2 % cd
+shuku@shukunoMacBook-Air ~ % ls
+24sb1007@student.gs.chiba-u.jp - Google Drive	Downloads					Music
+2685242410gh@gmail.com - Google Drive		ex						Pictures
+Desktop						Library						Public
+Documents					Movies
+shuku@shukunoMacBook-Air ~ % pwd
+/Users/shuku
+shuku@shukunoMacBook-Air ~ % cd dir2
+cd: no such file or directory: dir2
+shuku@shukunoMacBook-Air ~ % cd ex
+shuku@shukunoMacBook-Air ex % cd dir2
+shuku@shukunoMacBook-Air dir2 % pwd
+/Users/shuku/ex/dir2
+shuku@shukunoMacBook-Air dir2 % cat /Users/shuku/ex/file1
+Pathname
+shuku@shukunoMacBook-Air dir2 % cp /Users/shuku/ex/file1 file1
+shuku@shukunoMacBook-Air dir2 % pwd
+/Users/shuku/ex/dir2
+shuku@shukunoMacBook-Air dir2 % which pwd
+pwd: shell built-in command
+shuku@shukunoMacBook-Air dir2 % ls /
+Applications	cores		etc		Library		private		System		Users		var
+bin		dev		home		opt		sbin		tmp		usr		Volumes
+shuku@shukunoMacBook-Air dir2 % cd 
+shuku@shukunoMacBook-Air ~ % cd Documents/100learning/110Programming Language/114Unix
+cd: string not in pwd: Documents/100learning/110Programming
+shuku@shukunoMacBook-Air ~ % cd Documents/100learning/110ProgrammingLanguage/114Unix 
+shuku@shukunoMacBook-Air 114Unix % mkdir ex
+shuku@shukunoMacBook-Air 114Unix % ls
+ex
+shuku@shukunoMacBook-Air 114Unix % cd ex
+shuku@shukunoMacBook-Air ex % touch file1
+shuku@shukunoMacBook-Air ex % cd ..
+shuku@shukunoMacBook-Air 114Unix % ls-s
+zsh: command not found: ls-s
+shuku@shukunoMacBook-Air 114Unix % ls -s
+total 0
+0 ex
+shuku@shukunoMacBook-Air 114Unix % cd ex
+shuku@shukunoMacBook-Air ex % chmod a - r file1
+chmod: Invalid file mode: a
+shuku@shukunoMacBook-Air ex % chmod a - w file1
+chmod: Invalid file mode: a
+shuku@shukunoMacBook-Air ex % chmod u - w file1
+chmod: Invalid file mode: u
+shuku@shukunoMacBook-Air ex % chmod u-w file1
+shuku@shukunoMacBook-Air ex % chmod u-w file1
+shuku@shukunoMacBook-Air ex % ls -i
+8868949 file1
+shuku@shukunoMacBook-Air ex % ls -ai
+8867255 .	8866674 ..	8868949 file1
+shuku@shukunoMacBook-Air ex % echo first
+first
+shuku@shukunoMacBook-Air ex % echo first ; sleep
+first
+usage: sleep number[unit] [...]
+Unit can be 's' (seconds, the default), m (minutes), h (hours), or d (days).
+shuku@shukunoMacBook-Air ex % 
